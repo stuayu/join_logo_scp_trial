@@ -56,7 +56,7 @@ const argv = require("yargs")
   )
   .check(function(argv) {
     const ext = path.extname(argv.input);
-    if (ext !== ".ts") {
+    if (ext !== ".ts" && ext !== ".m2ts" && ext !== ".m2t" && ext !== ".mts") {
       console.error(`invalid file extension ${ext}.`);
       return false;
     }
